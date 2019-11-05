@@ -143,6 +143,10 @@ STATIC_ROOT = '/assets/static/'
 CORS_ORIGIN_WHITELIST = [
     'http://frontend:3000',
     'http://localhost:3000',
+    'http://localhost:80',
+    'http://localhost:88',
     'http://*:8081',
     'http://*:8000',
+    'http://*:80',
+    'http://*:88',
 ]
