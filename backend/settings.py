@@ -24,7 +24,7 @@ SECRET_KEY = 'ff!wopd4bkt6pz@@fdi=c%fo6q^yc*f6-yifmg8+zdyc6ign%@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -35,13 +35,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',
+    # 'corsheaders',
     'rest_framework',
     'todo',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -140,9 +140,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/assets/static/'
 
 # we whitelist localhost:3000 because that's where frontend will be served
-CORS_ORIGIN_WHITELIST = [
-    'http://frontend:3000',
-    'http://localhost:3000',
-    'http://*:8081',
-    'http://*:8000',
-]
+# CORS_ORIGIN_WHITELIST = [
+#     'http://frontend:3000',
+#     'http://localhost:3000',
+#     'http://*:8081',
+#     'http://*:8000',
+# ]
