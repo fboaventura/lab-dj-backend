@@ -144,4 +144,5 @@ CORS_ORIGIN_WHITELIST = [
     'http://frontend:3000',
     'http://localhost:3000',
     'http://*:8081',
+    'http://*:8000',
 ]
