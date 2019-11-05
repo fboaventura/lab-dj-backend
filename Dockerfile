@@ -3,8 +3,9 @@ FROM python:3.7-alpine3.10
 WORKDIR /usr/src/app
 
 COPY requirements.txt ./
-RUN apk add --no-cache --virtual .build-deps \
-        gcc freetype-dev musl-dev postgresql-client postgresql-dev && \
+RUN apk add --no-cache postgresql-dev postgresql-client bash && \
+    apk add --no-cache --virtual .build-deps \
+        gcc freetype-dev musl-dev && \
     pip install --no-cache-dir -r requirements.txt && \
     apk del .build-deps
 
